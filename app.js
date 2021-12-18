@@ -15,7 +15,7 @@ router.get('/',function(req,res){
   res.sendFile(path.join(__dirname,'web','index.html'));
 });
 
-templates.load(app);
+templates.load(app,__dirname);
 
 // define static data folders
 app.use('/images', express.static(path.join(__dirname,'data','images')));
