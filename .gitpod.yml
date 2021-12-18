@@ -1,0 +1,5 @@
+tasks:
+  - name: Setup environment
+    init: |
+      npm install
+      test $? -eq 0 && clear || echo "npm setup failed"

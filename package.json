@@ -1,0 +1,25 @@
+{
+  "name": "myvirtualmuseum",
+  "version": "1.0.0",
+  "description": "Website for displaying virtual museum in AR",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-sslify": "^1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benknight135/my-virtual-museum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benknight135/my-virtual-museum/issues"
+  },
+  "homepage": "https://github.com/benknight135/my-virtual-museum#readme"
+}
