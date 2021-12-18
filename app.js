@@ -12,8 +12,8 @@ app.use(favicon(path.join(__dirname,'images','favicon.ico')));
 router.get('/',function(req,res){
   res.sendFile(path.join(__dirname,'web','index.html'));
 });
-router.get('/ar-pattern',function(req,res){
-  res.sendFile(path.join(__dirname,'web','ar-pattern.html'));
+router.get('/ar-hunt',function(req,res){
+  res.sendFile(path.join(__dirname,'web','ar-hunt.html'));
 });
 router.get('/ar-gps',function(req,res){
   res.sendFile(path.join(__dirname,'web','ar-gps.html'));
