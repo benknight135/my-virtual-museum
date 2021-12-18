@@ -6,6 +6,15 @@ const load = function (app, root_path) {
     app.set("views", path.join(root_path, "views"));
     app.set("view engine", "pug");
 
+    // load index template
+    index_data = {
+        title: "My Virtual Museum",
+        description: "A collection of experiments with AR / VR content on the web."
+    }
+    app.get("/", (req, res) => {
+        res.render("index", index_data);
+    });
+
     // load treasure hunt templates
     const treasure_hunt_folder = path.join(root_path,'data','treasure_hunts');
     var hunts_array = []
@@ -42,8 +51,8 @@ const load = function (app, root_path) {
     }
     app.get("/ar-collection-select", (req, res) => {
         res.render("ar-collection-select", ar_collections);
-        });
-        app.post("/load-ar-collection", (req, res) => {
+    });
+    app.post("/load-ar-collection", (req, res) => {
         //TODO: choose which ar collection to load
         res.redirect('/animal-ar-collection');
     });

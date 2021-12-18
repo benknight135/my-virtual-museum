@@ -10,11 +10,6 @@ var templates = require(path.join(__dirname,'src','templates'));
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(favicon(path.join(__dirname,'data','images','favicon.ico')));
 
-// serve index.html
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname,'web','index.html'));
-});
-
 templates.load(app,__dirname);
 
 // define static data folders
