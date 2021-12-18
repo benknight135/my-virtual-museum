@@ -12,7 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
-    "express-sslify": "^1.2.0"
+    "express-sslify": "^1.2.0",
+    "serve-favicon": "^2.5.0"
   },
   "repository": {
     "type": "git",
