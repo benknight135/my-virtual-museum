@@ -1,7 +1,7 @@
 # My Virtual Museum
 Website for displaying virtual museum in AR.
 
-![Website](https://img.shields.io/website?down_color=red&down_message=down&up_color=success&up_message=live&url=http%3A%2F%2Fhttps://my-virtual-museum.herokuapp.com/%2F)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fmy-virtual-museum.herokuapp.com%2F)
 [![Deployment](https://github.com/benknight135/my-virtual-museum/actions/workflows/deploy.yml/badge.svg)](https://github.com/benknight135/my-virtual-museum/actions/workflows/deploy.yml)
 
 Use the QR code below to both launch the website url and as the marker for the AR models.
