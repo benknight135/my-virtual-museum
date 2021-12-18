@@ -19,6 +19,14 @@ router.get('/ar-gps',function(req,res){
   res.sendFile(path.join(__dirname,'web','ar-gps.html'));
 });
 
+// templates
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+
+app.get("/test", (req, res) => {
+  res.render("index", { title: "Home" });
+});
+
 // define static data folders
 app.use('/images', express.static(path.join(__dirname,'/images')));
 app.use('/markers', express.static(path.join(__dirname,'/markers')));
