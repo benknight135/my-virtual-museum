@@ -12,8 +12,7 @@ const load = function (app, root_path) {
         description: "A collection of experiments with AR / VR content on the web."
     }
     app.get("/", (req, res) => {
-        res.status(200);
-        res.render("index", index_data);
+        res.status(200).render("index", index_data);
     });
 
     // load treasure hunt templates
@@ -30,13 +29,11 @@ const load = function (app, root_path) {
     "hunts": hunts_array
     }
     app.get("/ar-hunt-select", (req, res) => {
-        res.status(200);
-        res.render("ar-hunt-select", treasure_hunts);
+        res.status(200).render("ar-hunt-select", treasure_hunts);
     });
     app.post("/load-ar-hunt", (req, res) => {
         //TODO: choose which ar hunt to load
-        res.status(200);
-        res.redirect('/barden-lake-ar-hunt');
+        res.status(200).redirect('/barden-lake-ar-hunt');
     });
 
     // load AR object collection templates
@@ -53,13 +50,10 @@ const load = function (app, root_path) {
         "collections": collections_array
     }
     app.get("/ar-collection-select", (req, res) => {
-        res.status(200);
-        res.render("ar-collection-select", ar_collections);
+        res.status(200).render("ar-collection-select", ar_collections);
     });
     app.post("/load-ar-collection", (req, res) => {
-        res.status(200);
-        //TODO: choose which ar collection to load
-        res.redirect('/animal-ar-collection');
+        res.status(200).redirect('/animal-ar-collection');
     });
 }
 
