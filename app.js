@@ -16,9 +16,9 @@ app.use(favicon(path.join(__dirname,'data','images','favicon.ico')));
 templates.load(app,__dirname);
 
 // define static data folders
-app.use('/images', express.static(path.join(__dirname,'data','images')));
-app.use('/markers', express.static(path.join(__dirname,'data','markers')));
-app.use('/models', express.static(path.join(__dirname,'data','models')));
+app.use('/data/images', express.static(path.join(__dirname,'data','images')));
+app.use('/data/markers', express.static(path.join(__dirname,'data','markers')));
+app.use('/data/models', express.static(path.join(__dirname,'data','models')));
 
 //add the router
 app.use('/', router);
