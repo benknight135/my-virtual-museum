@@ -18,4 +18,4 @@ See [development strategy](.github/DEVELOPMENT_STRATEGY.md) for more details on 
 ## Deployment
 See [release strategy](.github/RELEASE_STRATEGY.md) for details on how releases / deployments are handelling in this repository.
 
-Deployed website is available [here](https://myvirtualmuseum.org)
+Deployed website is available [here](https://www.myvirtualmuseum.org)
