@@ -12,9 +12,6 @@ app.use(favicon(path.join(__dirname,'data','images','favicon.ico')));
 router.get('/',function(req,res){
   res.sendFile(path.join(__dirname,'web','index.html'));
 });
-router.get('/ar-pattern',function(req,res){
-  res.sendFile(path.join(__dirname,'web','ar-pattern.html'));
-});
 
 // templates
 app.set("views", path.join(__dirname, "views"));
@@ -41,6 +38,29 @@ app.post("/load-ar-hunt", (req, res) => {
 var barden_lake_hunt = require(path.join(__dirname,'data','treasure_hunts','barden_lake.json'));
 app.get("/barden-lake-ar-hunt", (req, res) => {
   res.render("ar-hunt", barden_lake_hunt);
+});
+
+// load AR object collection templates
+// TODO: load this automatically from files in 'ar_collections' folder
+var ar_collections = {
+  "collections":[
+    {
+      "name": "Animals",
+      "link": "/animal-ar-collection"
+    }
+  ]
+}
+app.get("/ar-collection-select", (req, res) => {
+  res.render("ar-collection-select", ar_collections);
+});
+app.post("/load-ar-collection", (req, res) => {
+  //TODO: choose which ar collection to load
+  res.redirect('/animal-ar-collection');
+});
+
+var animal_obj_collection = require(path.join(__dirname,'data','ar_collections','animals.json'));
+app.get("/animal-ar-collection", (req, res) => {
+  res.render("ar-collection", animal_obj_collection);
 });
 
 // define static data folders
