@@ -15,8 +15,8 @@
             },
             "model":
             {
-                "obj": "./data/models/whale.obj",
-                "mtl": "./data/models/whale.mtl",
+                "obj": "/data/models/whale.obj",
+                "mtl": "/data/models/whale.mtl",
                 "scale": {
                     "x": 0.5,
                     "y": 0.5,
@@ -35,8 +35,8 @@
             },
             "model":
             {
-                "obj": "./data/models/whale.obj",
-                "mtl": "./data/models/whale.mtl",
+                "obj": "/data/models/whale.obj",
+                "mtl": "/data/models/whale.mtl",
                 "scale": {
                     "x": 0.5,
                     "y": 0.5,
