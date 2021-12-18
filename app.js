@@ -1,15 +1,18 @@
 const express = require('express');
-var enforce = require('express-sslify');
-var favicon = require('serve-favicon');
+const enforce = require('express-sslify');
+const favicon = require('serve-favicon');
 const app = express();
 const path = require('path');
 const router = express.Router();
+const templates = require(path.join(__dirname,'src','templates'));
 
-var templates = require(path.join(__dirname,'src','templates'));
-
+// enforce https (required for ar.js to work)
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
+// load favicon
 app.use(favicon(path.join(__dirname,'data','images','favicon.ico')));
 
+// load app templates
 templates.load(app,__dirname);
 
 // define static data folders
@@ -21,8 +24,8 @@ app.use('/models', express.static(path.join(__dirname,'data','models')));
 app.use('/', router);
 
 // start app
-var port = process.env.PORT || 3000;
-var host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 3000;
+const host = process.env.HOST || '0.0.0.0';
 app.listen(port, host, function() {
     console.log('Listening on port %d', port);
 });
