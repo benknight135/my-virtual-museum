@@ -21,6 +21,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 // load treasure hunt templates
+// TODO: load this automatically from files in 'treausre_hunt' folder
 var treasure_hunts = {
   "hunts":[
     {

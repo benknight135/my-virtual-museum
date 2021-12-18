@@ -23,13 +23,19 @@ html
     input {
         margin: 5px;
     }
+    footer {
+        position: fixed;
+        bottom: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
 
   body
     div(class="w3-content" style="max-width:1500px")
         div(class="w3-opacity")
             header(class="w3-center w3-margin-bottom")
                 h1 
-                    b Treasure Hunt
+                    b AR Treasure Hunt
                     p Select treasure hunt location
     div(class="grid-container w3-center")
         form(action="/load-ar-hunt" method="post")
@@ -38,6 +44,6 @@ html
                     option(value=hunt.name) #{hunt.name}
             input(class="w3-button w3-black" type="submit" value="Submit")
 
-    footer(class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px")
+    footer(class="w3-container w3-light-grey w3-center w3-opacity w3-xlarge")
         a(href="https://github.com/benknight135/my-virtual-museum")
             i(class="fa fa-github w3-hover-opacity")
