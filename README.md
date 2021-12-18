@@ -1,7 +1,7 @@
 # My Virtual Museum
 Website for displaying virtual museum in AR.
 
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fmyvirtualmuseum.org%2F)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.myvirtualmuseum.org)
 [![Deployment](https://github.com/benknight135/my-virtual-museum/actions/workflows/deploy.yml/badge.svg)](https://github.com/benknight135/my-virtual-museum/actions/workflows/deploy.yml)
 
 Use the QR code below to both launch the website url and as the marker for the AR models.
@@ -18,4 +18,4 @@ See [development strategy](.github/DEVELOPMENT_STRATEGY.md) for more details on 
 ## Deployment
 See [release strategy](.github/RELEASE_STRATEGY.md) for details on how releases / deployments are handelling in this repository.
 
-Deployed website is available [here](https://myvirtualmuseum.org)
+Deployed website is available [here](https://www.myvirtualmuseum.org)
