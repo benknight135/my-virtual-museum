@@ -1,0 +1,28 @@
+{
+    "name": "Animals",
+    "title": "AR Animals",
+    "url": "/animal-ar-collection",
+    "items":
+    [
+        {
+            "info":{
+                "title": "Whale",
+                "description": "The Antartic blue whale is the largest animal on the planet"
+            },
+            "pattern":
+            {
+                "url":"./data/markers/pattern-marker_whale.patt"
+            },
+            "model":
+            {
+                "obj": "./data/models/whale.obj",
+                "mtl": "./data/models/whale.mtl",
+                "scale": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        }
+    ]
+}

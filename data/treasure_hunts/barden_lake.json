@@ -1,0 +1,48 @@
+{
+    "name": "Barden Lake",
+    "title": "Barden Lake Treasure Hunt",
+    "url": "/barden-lake-ar-hunt",
+    "items":
+    [
+        {
+            "info":{
+                "title": "Whale",
+                "description": "The Antartic blue whale is the largest animal on the planet"
+            },
+            "location": {
+                "lat": 51.19357129840819,
+                "long": 0.25483072540990426
+            },
+            "model":
+            {
+                "obj": "./data/models/whale.obj",
+                "mtl": "./data/models/whale.mtl",
+                "scale": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "info":{
+                "title": "Whale 2",
+                "description": "The Antartic blue whale is the largest animal on the planet"
+            },
+            "location": {
+                "lat": 51.192409847171064,
+                "long": 0.25315588662281224
+            },
+            "model":
+            {
+                "obj": "./data/models/whale.obj",
+                "mtl": "./data/models/whale.mtl",
+                "scale": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        }
+    ]
+}
