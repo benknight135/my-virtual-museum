@@ -1,7 +1,7 @@
 {
     "name": "Animals",
     "title": "AR Animals",
-    "url": "/animal-ar-collection",
+    "tag": "animal",
     "items":
     [
         {
@@ -15,6 +15,7 @@
             },
             "model":
             {
+                "type": "obj",
                 "obj": "/data/models/whale.obj",
                 "mtl": "/data/models/whale.mtl",
                 "scale": {
