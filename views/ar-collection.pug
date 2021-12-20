@@ -1,24 +1,53 @@
 block variables
 doctype html
 html
-  head
-    meta(charset="utf-8")
-    script(src="https://aframe.io/releases/1.0.0/aframe.min.js")
-    script(src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js")
-    script(src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js")
-    title #{title}
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        title #{title}
 
-  body(style="margin : 0px; overflow: hidden;")
-    a-scene(vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false;" renderer="logarithmicDepthBuffer: true")
-      each item in items
-        a-marker(preset='custom' type='pattern' url=item.pattern.url)
-          if item.model.type === "obj"
-            a-entity(
-              scale=item.model.scale.x+" "+item.model.scale.y+" "+item.model.scale.z
-              obj-model="obj: url("+item.model.obj+"); mtl: url("+item.model.mtl+")")
-          if item.model.type === "gltf"
-            a-entity(
-              scale=item.model.scale.x+" "+item.model.scale.y+" "+item.model.scale.z
-              gltf-model="url("+item.model.gltf+");"
-              animation-mixer="clip: *; loop: repeat;")
-      a-entity(camera)
+    script.
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+        }
+
+    style.
+        body,
+        h1 {
+            font-family: "Montserrat", sans-serif
+        }
+        .ar-frame {
+            position: absolute;
+            width: 100%;
+            height: 78%;
+            border: none
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            margin-top: 10%;
+            width: 100%;
+        }
+
+    body
+        div(class="w3-content" style="max-width:1500px")
+            div(class="w3-opacity")
+                header(class="w3-center w3-margin-bottom")
+                    h1
+                        b #{title}
+                    p
+                        b Scan a marker to see #{title}
+
+        iframe(
+            class="ar-frame"
+            id=tag+"frame"
+            title="AR"
+            frameborder="0" scrolling="no" onload="resizeIframe(this)"
+            src='/'+tag+'-ar-collection-frame')
+
+    footer(class="w3-container w3-light-grey w3-center w3-opacity w3-xlarge")
+        a(href="https://github.com/benknight135/my-virtual-museum")
+            i(class="fa fa-github w3-hover-opacity")

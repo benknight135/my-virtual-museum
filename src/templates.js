@@ -21,7 +21,8 @@ const load = function (app, root_path) {
     fs.readdirSync(treasure_hunt_folder).forEach(file => {
         var treasure_hunt = require(path.join(treasure_hunt_folder,file));
         hunts_array.push(treasure_hunt);
-        app.get(treasure_hunt.url, (req, res) => {
+        var frame_url = '/'+treasure_hunt.tag+'-ar-hunt'
+        app.get(frame_url, (req, res) => {
             res.render("ar-hunt", treasure_hunt);
         });
     });
@@ -42,7 +43,12 @@ const load = function (app, root_path) {
     fs.readdirSync(ar_collections_folder).forEach(file => {
         var collection = require(path.join(ar_collections_folder,file));
         collections_array.push(collection);
-        app.get(collection.url, (req, res) => {
+        var frame_url = '/'+collection.tag+'-ar-collection-frame'
+        app.get(frame_url, (req, res) => {
+            res.render("ar-collection-frame", collection);
+        });
+        var page_url = '/'+collection.tag+'-ar-collection'
+        app.get(page_url, (req, res) => {
             res.render("ar-collection", collection);
         });
     });
