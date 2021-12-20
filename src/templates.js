@@ -32,8 +32,8 @@ const load = function (app, root_path) {
         res.status(200).render("ar-hunt-select", treasure_hunts);
     });
     app.post("/load-ar-hunt", (req, res) => {
-        //TODO: choose which ar hunt to load
-        res.status(200).redirect('/barden-lake-ar-hunt');
+        var tag = req.body.hunt;
+        res.status(200).redirect('/'+tag+'-ar-hunt');
     });
 
     // load AR object collection templates
@@ -53,7 +53,8 @@ const load = function (app, root_path) {
         res.status(200).render("ar-collection-select", ar_collections);
     });
     app.post("/load-ar-collection", (req, res) => {
-        res.status(200).redirect('/animal-ar-collection');
+        var tag = req.body.collection;
+        res.status(200).redirect('/'+tag+'-ar-collection');
     });
 }
 
