@@ -15,6 +15,7 @@
             },
             "model":
             {
+                "type": "obj",
                 "obj": "/data/models/whale.obj",
                 "mtl": "/data/models/whale.mtl",
                 "scale": {
