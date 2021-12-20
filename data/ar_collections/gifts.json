@@ -1,0 +1,28 @@
+{
+    "name": "Gifts",
+    "title": "AR Gifts",
+    "tag": "gifts",
+    "items":
+    [
+        {
+            "info":{
+                "title": "Sam",
+                "description": "3D recreation of 2D character by Lucy Hurst"
+            },
+            "pattern":
+            {
+                "url":"/data/markers/pattern-marker_sam.patt"
+            },
+            "model":
+            {
+                "type": "gltf",
+                "gltf": "/data/models/sam.gltf",
+                "scale": {
+                    "x": 0.25,
+                    "y": 0.25,
+                    "z": 0.25
+                }
+            }
+        }
+    ]
+}

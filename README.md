@@ -6,7 +6,7 @@ Website for displaying virtual museum in AR.
 
 Use the QR code below to both launch the website url and as the marker for the AR models.
 
-<img src="data/images/qr-code.png" alt="drawing" width="250"/>
+<img src="data/images/qr_whale.png" alt="drawing" width="250"/>
 
 ## Marker Generation
 The inner marker holds the custom pattern used by the AR system. This is generated using this [online tool](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html). The custom logo used is provided in this repository [here](images/marker_whale.png).  
