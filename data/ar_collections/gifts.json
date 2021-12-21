@@ -23,6 +23,20 @@
                     "z": 0.25
                 }
             }
+        },
+        {
+            "info":{
+                "title": "CustomTest",
+                "description": "Testing custom model entitiy"
+            },
+            "pattern":
+            {
+                "url":"/data/markers/pattern-marker_whale.patt"
+            },
+            "model":
+            {
+                "data": "a-entity(geometry=\"primitive: box\" material=\"color: red\")"
+            }
         }
     ]
 }

@@ -25,4 +25,6 @@ html
               scale=item.model.scale.x+" "+item.model.scale.y+" "+item.model.scale.z
               gltf-model="url("+item.model.gltf+");"
               animation-mixer="clip: *; loop: repeat;")
+          if item.model.type === "custom"
+            #[${item.model.data}]
       a-entity(camera)
