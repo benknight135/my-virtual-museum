@@ -13,16 +13,24 @@
             {
                 "url":"/data/markers/pattern-marker_gift.patt"
             },
-            "model":
-            {
-                "type": "gltf",
-                "gltf": "/data/models/sam.gltf",
-                "scale": {
-                    "x": 0.25,
-                    "y": 0.25,
-                    "z": 0.25
+            "models":
+            [
+                {
+                    "type": "gltf",
+                    "gltf": "/data/models/sam.gltf",
+                    "scale": {
+                        "x": 0.25,
+                        "y": 0.25,
+                        "z": 0.25
+                    },
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "animation": "clip: *; loop: repeat;"
                 }
-            }
+            ]
         },
         {
             "info":{
@@ -33,10 +41,17 @@
             {
                 "url":"/data/markers/pattern-marker_whale.patt"
             },
-            "model":
-            {
-                "data": "a-entity(geometry=\"primitive: box\" material=\"color: red\")"
-            }
+            "models":
+            [
+                {
+                    "type": "html",
+                    "data": "<a-entity geometry=\"primitive: box\" material=\"color: red\" position=\"0 0 -1\">"
+                },
+                {
+                    "type": "html",
+                    "data": "<a-entity geometry=\"primitive: box\" material=\"color: blue\" position=\"0 0 0\">"
+                }
+            ]
         }
     ]
 }
