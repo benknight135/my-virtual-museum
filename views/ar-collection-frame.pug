@@ -29,6 +29,20 @@ html
                 animation-mixer=model.animation
                 position=model.position.x+" "+model.position.y+" "+model.position.z
               )
+            if model.type === "partical-system"
+              a-entity(
+                scale=model.scale.x+" "+model.scale.y+" "+model.scale.z
+                particle-system="preset: "+model.preset+";"+"particleCount: "+model.particleCount+";"+
+                  "texture: "+model.texture+";"+"color: "+model.color+";"+
+                  "maxAge: "+model.maxAge+";"+
+                  "positionSpread: "+model.positionSpread+";"+
+                  "rotationAngle: "+model.rotationAngle+";"+
+                  "accelerationValue: "+model.accelerationValue+";"+
+                  "accelerationSpread: "+model.accelerationSpread+";"+
+                  "velocityValue: "+model.velocityValue+";"+
+                  "velocitySpread: "+model.velocitySpread+";"
+                position=model.position.x+" "+model.position.y+" "+model.position.z
+              )
             if model.type === "html"
               | !{model.data}
       a-entity(camera)
