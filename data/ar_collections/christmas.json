@@ -13,16 +13,23 @@
             {
                 "url":"/data/markers/pattern-marker_gift.patt"
             },
-            "model":
-            {
-                "type": "gltf",
-                "gltf": "/data/models/snowglobe.gltf",
-                "scale": {
-                    "x": 0.75,
-                    "y": 0.75,
-                    "z": 0.75
+            "models":
+            [
+                {
+                    "type": "gltf",
+                    "gltf": "/data/models/snowglobe.gltf",
+                    "scale": {
+                        "x": 0.75,
+                        "y": 0.75,
+                        "z": 0.75
+                    },
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
                 }
-            }
+            ]
         }
     ]
 }

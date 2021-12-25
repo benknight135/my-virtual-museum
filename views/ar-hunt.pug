@@ -17,15 +17,22 @@ html
       arjs="sourceType: webcam; debugUIEnabled: false; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
       renderer="logarithmicDepthBuffer: true")
       each item in items
-        if item.model.type === "obj"
-          a-entity(
-            scale=item.model.scale.x+" "+item.model.scale.y+" "+item.model.scale.z
-            obj-model="obj: url("+item.model.obj+"); mtl: url("+item.model.mtl+")"
-            gps-entity-place="latitude: "+item.location.lat+"; longitude: "+item.location.long+";")
-        if item.model.type === "gltf"
-          a-entity(
-            scale=item.model.scale.x+" "+item.model.scale.y+" "+item.model.scale.z
-            gltf-model="url("+item.model.gltf+");"
-            animation-mixer="clip: *; loop: repeat;"
-            gps-entity-place="latitude: "+item.location.lat+"; longitude: "+item.location.long+";")
+        each model in item.models
+          if model.type === "obj"
+            a-entity(
+              scale=model.scale.x+" "+model.scale.y+" "+model.scale.z
+              obj-model="obj: url("+model.obj+"); mtl: url("+model.mtl+")"
+              gps-entity-place="latitude: "+item.location.lat+"; longitude: "+item.location.long+";"
+              position=model.position.x+" "+model.position.y+" "+model.position.z
+            )
+          if model.type === "gltf"
+            a-entity(
+              scale=model.scale.x+" "+model.scale.y+" "+model.scale.z
+              gltf-model="url("+model.gltf+");"
+              animation-mixer="clip: *; loop: repeat;"
+              gps-entity-place="latitude: "+item.location.lat+"; longitude: "+item.location.long+";"
+              position=model.position.x+" "+model.position.y+" "+model.position.z
+            )
+          if model.type === "html"
+            | !{model.data}
       a-camera(gps-camera)
