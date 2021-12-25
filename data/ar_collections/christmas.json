@@ -1,0 +1,28 @@
+{
+    "name": "Christmas",
+    "title": "AR Christmas",
+    "tag": "christmas",
+    "items":
+    [
+        {
+            "info":{
+                "title": "Snow Globe",
+                "description": "House and tree inside snow globe"
+            },
+            "pattern":
+            {
+                "url":"/data/markers/pattern-marker_gift.patt"
+            },
+            "model":
+            {
+                "type": "gltf",
+                "gltf": "/data/models/snowglobe.gltf",
+                "scale": {
+                    "x": 0.75,
+                    "y": 0.75,
+                    "z": 0.75
+                }
+            }
+        }
+    ]
+}
