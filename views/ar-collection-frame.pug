@@ -13,6 +13,10 @@ html
       embedded
       arjs="debugUIEnabled: false; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
       renderer="logarithmicDepthBuffer: true")
+      if assets !== undefined
+        a-assets()
+          each asset in assets
+            a-asset-item(src=asset.src id=asset.id)
       each item in items
         a-marker(preset='custom' type='pattern' url=item.pattern.url)
           each model in item.models
