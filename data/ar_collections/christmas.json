@@ -2,6 +2,13 @@
     "name": "Christmas",
     "title": "AR Christmas",
     "tag": "christmas",
+    "required_js":
+    [
+        "https://aframe.io/releases/1.0.4/aframe.min.js",
+        "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js",
+        "https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js",
+        "https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"
+    ],
     "items":
     [
         {
@@ -22,6 +29,30 @@
                         "x": 0.75,
                         "y": 0.75,
                         "z": 0.75
+                    },
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    }
+                },
+                {
+                    "type": "partical-system",
+                    "preset": "snow",
+                    "particleCount": "10000",
+                    "maxAge": "20",
+                    "texture": "https://cdn.rawgit.com/IdeaSpaceVR/aframe-particle-system-component/master/dist/images/smokeparticle.png",
+                    "color": "#FFFFFF",
+                    "positionSpread": "100 100 100",
+                    "rotationAngle": "3.14",
+                    "accelerationValue": "0 0 0",
+                    "accelerationSpread": "0.2 0 0.2",
+                    "velocityValue": "0 8 0",
+                    "velocitySpread": "2 0 2",
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0,
+                        "z": 1.0
                     },
                     "position": {
                         "x": 0,
