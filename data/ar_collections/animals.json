@@ -1,6 +1,7 @@
 {
     "name": "Animals",
     "title": "AR Animals",
+    "subtitle": "Scan a marker to see an AR Animal",
     "tag": "animal",
     "required_js":
     [
