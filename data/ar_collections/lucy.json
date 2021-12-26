@@ -1,8 +1,8 @@
 {
-    "name": "Gifts",
-    "title": "AR Gifts",
-    "subtitle": "Scan a marker to see an AR Gift",
-    "tag": "gifts",
+    "name": "Lucy's Christmas Gift 2021",
+    "title": "Merry Christmas!",
+    "subtitle": "Scan a marker to open your christmas gift",
+    "tag": "gifts-lucy-christmas-2021",
     "required_js":
     [
         "https://aframe.io/releases/1.2.0/aframe.min.js",

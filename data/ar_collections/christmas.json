@@ -1,6 +1,7 @@
 {
     "name": "Christmas",
     "title": "AR Christmas",
+    "subtitle": "Scan a marker to see an AR Christmas Scene",
     "tag": "christmas",
     "required_js":
     [
