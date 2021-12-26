@@ -3,9 +3,8 @@ doctype html
 html
   head
     meta(charset="utf-8")
-    script(src="https://aframe.io/releases/1.0.0/aframe.min.js")
-    script(src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js")
-    script(src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js")
+    each js_src in required_js
+      script(src=js_src)
     title #{title}
 
   body(style="margin : 0px; overflow: hidden;")
@@ -14,6 +13,10 @@ html
       embedded
       arjs="debugUIEnabled: false; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
       renderer="logarithmicDepthBuffer: true")
+      if assets !== undefined
+        a-assets()
+          each asset in assets
+            a-asset-item(src=asset.src id=asset.id)
       each item in items
         a-marker(preset='custom' type='pattern' url=item.pattern.url)
           each model in item.models
@@ -28,6 +31,20 @@ html
                 scale=model.scale.x+" "+model.scale.y+" "+model.scale.z
                 gltf-model="url("+model.gltf+");"
                 animation-mixer=model.animation
+                position=model.position.x+" "+model.position.y+" "+model.position.z
+              )
+            if model.type === "partical-system"
+              a-entity(
+                scale=model.scale.x+" "+model.scale.y+" "+model.scale.z
+                particle-system="preset: "+model.preset+";"+"particleCount: "+model.particleCount+";"+
+                  "texture: "+model.texture+";"+"color: "+model.color+";"+
+                  "maxAge: "+model.maxAge+";"+
+                  "positionSpread: "+model.positionSpread+";"+
+                  "rotationAngle: "+model.rotationAngle+";"+
+                  "accelerationValue: "+model.accelerationValue+";"+
+                  "accelerationSpread: "+model.accelerationSpread+";"+
+                  "velocityValue: "+model.velocityValue+";"+
+                  "velocitySpread: "+model.velocitySpread+";"
                 position=model.position.x+" "+model.position.y+" "+model.position.z
               )
             if model.type === "html"
