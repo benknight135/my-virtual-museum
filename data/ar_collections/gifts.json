@@ -35,27 +35,21 @@
                         "z": 0
                     },
                     "animation": "clip: *; loop: repeat;"
-                }
-            ]
-        },
-        {
-            "info":{
-                "title": "CustomTest",
-                "description": "Testing custom model entitiy"
-            },
-            "pattern":
-            {
-                "url":"/data/markers/pattern-marker_whale.patt"
-            },
-            "models":
-            [
-                {
-                    "type": "html",
-                    "data": "<a-entity geometry=\"primitive: box\" material=\"color: red\" position=\"0 0 -1\"></a-entity>"
                 },
                 {
-                    "type": "html",
-                    "data": "<a-entity geometry=\"primitive: box\" material=\"color: blue\" position=\"0 0 0\"></a-entity>"
+                    "type": "gltf",
+                    "gltf": "/data/models/present_wrap.gltf",
+                    "scale": {
+                        "x": 0.9,
+                        "y": 0.9,
+                        "z": 0.9
+                    },
+                    "position": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "animation": "clip: *; loop: pingpong;"
                 }
             ]
         }
