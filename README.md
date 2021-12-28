@@ -1,6 +1,8 @@
 # My Virtual Museum
 Website for displaying virtual museum in AR.
 
+***WARNING: This repository is in active development so is subject to frequent changes and may contain broken code.***
+
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.myvirtualmuseum.org)
 [![Deployment](https://github.com/benknight135/my-virtual-museum/actions/workflows/deploy.yml/badge.svg)](https://github.com/benknight135/my-virtual-museum/actions/workflows/deploy.yml)
 
